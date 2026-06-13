@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/api/auth', require('./routes/authRoutes'));
+
 // Basic Route
 app.get('/', (req, res) => {
     res.send('E-commerce Admin Panel API is running...');
